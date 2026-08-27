@@ -1,0 +1,13 @@
+[server]
+headless = true
+# Streamlit's default watcher walks every module in site-packages on each rerun. With
+# transformers installed that means importing hundreds of image_processing_* modules,
+# each of which pulls torchvision (not installed) and raises. Noisy and very slow.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#0d6b76"
